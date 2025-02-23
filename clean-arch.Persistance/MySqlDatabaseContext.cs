@@ -1,7 +1,7 @@
 ﻿using clean_arch.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace clean_arch.Persistance
+namespace clean_arch.Persistence
 {
     public class MySqlDatabaseContext : DbContext
     {

@@ -1,4 +1,5 @@
-using clean_arch.Persistance;
+using clean_arch.Api.Configurations;
+using clean_arch.Persistence;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,6 +14,7 @@ builder.Services.AddDbContext<MySqlDatabaseContext>(options =>
         .UseMySql(connectionString, ServerVersion.AutoDetect(connectionString))
 );
 
+builder.Services.RegisterServices(builder.Configuration);
 // Add services to the container.
 
 builder.Services.AddControllers();

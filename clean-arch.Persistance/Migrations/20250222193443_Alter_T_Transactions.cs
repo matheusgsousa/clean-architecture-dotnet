@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace clean_arch.Persistance.Migrations
+namespace clean_arch.Persistence.Migrations
 {
     /// <inheritdoc />
     public partial class Alter_T_Transactions : Migration

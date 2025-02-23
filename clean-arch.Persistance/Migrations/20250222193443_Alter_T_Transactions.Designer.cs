@@ -5,11 +5,11 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using clean_arch.Persistance;
+using clean_arch.Persistence;
 
 #nullable disable
 
-namespace clean_arch.Persistance.Migrations
+namespace clean_arch.Persistence.Migrations
 {
     [DbContext(typeof(MySqlDatabaseContext))]
     [Migration("20250222193443_Alter_T_Transactions")]

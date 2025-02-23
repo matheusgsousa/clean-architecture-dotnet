@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using clean_arch.Persistance;
+using clean_arch.Persistence;
 
 #nullable disable
 
-namespace clean_arch.Persistance.Migrations
+namespace clean_arch.Persistence.Migrations
 {
     [DbContext(typeof(MySqlDatabaseContext))]
     partial class MySqlDatabaseContextModelSnapshot : ModelSnapshot

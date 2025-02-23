@@ -1,8 +1,8 @@
 ﻿
 
-using clean_arch.Persistance.Interfaces;
+using clean_arch.Persistence.Interfaces;
 
-namespace clean_arch.Persistance
+namespace clean_arch.Persistence
 {
     public class MySqlDbSettings : IMySqlDbSettings
     {

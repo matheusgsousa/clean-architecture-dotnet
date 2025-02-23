@@ -1,4 +1,4 @@
-﻿namespace clean_arch.Persistance.Interfaces
+﻿namespace clean_arch.Persistence.Interfaces
 {
     public interface IMySqlDbSettings
     {
