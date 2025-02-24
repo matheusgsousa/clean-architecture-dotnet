@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "clean-arch.Persistence", "c
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "clean-arch.Service", "clean-arch.Service\clean-arch.Service.csproj", "{B46C1555-CF5B-4D73-8FFE-7153ACB09054}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "clean-arch.Tests", "clean-arch.Tests\clean-arch.Tests.csproj", "{F50C012D-BF4A-4464-BF4E-7711C459E9D1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{B46C1555-CF5B-4D73-8FFE-7153ACB09054}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B46C1555-CF5B-4D73-8FFE-7153ACB09054}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B46C1555-CF5B-4D73-8FFE-7153ACB09054}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F50C012D-BF4A-4464-BF4E-7711C459E9D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F50C012D-BF4A-4464-BF4E-7711C459E9D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F50C012D-BF4A-4464-BF4E-7711C459E9D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F50C012D-BF4A-4464-BF4E-7711C459E9D1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

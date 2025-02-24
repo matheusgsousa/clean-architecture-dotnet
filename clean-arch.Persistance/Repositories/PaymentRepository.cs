@@ -10,5 +10,13 @@ namespace clean_arch.Persistence.Repositories
 {
     public class PaymentRepository(MySqlDatabaseContext context) : BaseRepository<Payment>(context), IPaymentRepository
     {
+        private readonly MySqlDatabaseContext _context = context;
+        public async Task DeleteAll()
+        {
+            var payments = ObjectSet.ToList();
+            ObjectSet.RemoveRange(payments);
+            await _context.SaveChangesAsync();
+        }
+
     }
 }

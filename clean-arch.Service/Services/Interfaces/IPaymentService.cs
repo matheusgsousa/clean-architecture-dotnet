@@ -8,5 +8,7 @@ namespace clean_arch.Service.Services.Interfaces
     public interface IPaymentService
     {
         Task<ResultResponse<PaymentResponse>> Submit(PaymentRequest request);
+        Task <ResultResponse<object>> DeleteAllPayments();
+        Task<ResultResponse<PaymentStatsResponse>> GetPaymentsStats();
     }
 }

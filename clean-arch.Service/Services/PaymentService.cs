@@ -26,7 +26,7 @@ namespace clean_arch.Service.Services
 
                 var paymentDTO = new PaymentDTO()
                 {
-
+                    Id = payment.Id,
                     Amount = payment.Amount,
                     Date = payment.Date
                 };
@@ -43,11 +43,46 @@ namespace clean_arch.Service.Services
                 response.AddError(ex, "Error in submit payment");
                 return response;
             };
-            
-
-
-
         }
 
+        public async Task<ResultResponse<object>> DeleteAllPayments()
+        {
+            var response = new ResultResponse<object>();
+            try
+            {
+                await _paymentRepository.DeleteAll();
+                return response;
+            }
+            catch (Exception ex)
+            {
+                response.AddError(ex, "Error in delete all payments");
+                return response;
+            }
+        }
+        public async Task<ResultResponse<PaymentStatsResponse>> GetPaymentsStats()
+        {
+            var response = new ResultResponse<PaymentStatsResponse>();
+            try
+            {
+                var payments =  _paymentRepository.GetAll();
+                var totalAmount = payments.Sum(x => x.Amount);
+                var averageAmount = totalAmount / payments.Count();
+                var paymentStats = new PaymentStatsResponse()
+                {
+                    TotalAmount = totalAmount,
+                    AverageAmount = averageAmount,
+                    TotalPayments = payments.Count(),
+                    MinAmount = payments.Min(x => x.Amount),
+                    MaxAmount = payments.Max(x => x.Amount)
+                };
+                response.AddData(paymentStats);
+                return response;
+            }
+            catch (Exception ex)
+            {
+                response.AddError(ex, "Error in get payment stats");
+                return response;
+            }
+        }
     }
 }
